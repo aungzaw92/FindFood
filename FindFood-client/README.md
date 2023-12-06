@@ -63,20 +63,31 @@ Navigating the balance between introducing innovative features and ensuring ease
 Realizing the power of data to inform design decisions, personalize experiences, and predict market trends.
 
 ## SETUP:
+To run this project please follow this path:
 
-On both client and server:
-`npm i`
-`npm start`
+<li>📝 Download zip file from GitHub <strong>master</strong> branch</li>
+<li>📝 npm install on both Server and Client side</li>
+<li>📝 Create <strong>.env</strong> file in both Client and Server side</li>
+<li>📝 npm start on both side Server and Client</li></br></br>
 
-On Client:
-Create .env file. In the file mention the port you will be using.
+On Client: </br>
 `REACT_APP_BACKEND_URL=http://localhost:8888`
 
-On Server:
-Create, env file. Add the required information below:
-<li>PORT=8888</li>
-<li>DB_HOST=</li>
-<li>NODE_ENV=development</li>
-<li>DB_LOCAL_DBNAME="industry"</li>
-<li>DB_LOCAL_USER=</li>
-<li>DB_LOCAL_PASSWORD=</li>
+On Server:</br>
+`PORT=8888` </br>
+`DB_HOST=` </br>
+`NODE_ENV=development` </br>
+`DB_LOCAL_DBNAME="industry"`</br>
+`DB_LOCAL_USER=`</br>
+`DB_LOCAL_PASSWORD=`</br>
+
+## Connect with us
+
+👉Please Help us with your valuable feedback about this project 🙂⭐</br>
+Let's connect via LinkedIn:<br/>
+
+✒ Aung Zaw Myo Naing [link](https://www.linkedin.com/in/aungzawmyonaing/) </br>
+✒ Fateme Bagherzad [link](https://www.linkedin.com/in/fatemeh-bagherzad/) </br>
+✒ Dat Dinh [link](https://www.linkedin.com/in/dat-dinh-/) </br>
+✒ Kyle Blaser [link](https://www.linkedin.com/in/kyle-blaser-16054b8b/) </br>
+✒ Justin Swallow [link](https://www.linkedin.com/in/justin-swallow/) </br>
