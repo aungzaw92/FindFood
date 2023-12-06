@@ -65,8 +65,8 @@ Realizing the power of data to inform design decisions, personalize experiences,
 ## SETUP:
 
 On both client and server:
-`<li>npm i</li>`
-`<li>npm start</li>`
+`npm i`
+`npm start`
 
 On Client:
 Create .env file. In the file mention the port you will be using.
@@ -74,9 +74,9 @@ Create .env file. In the file mention the port you will be using.
 
 On Server:
 Create, env file. Add the required information below:
-`<li>PORT=8888</li>`
-`<li>DB_HOST=</li>`
-`<li>NODE_ENV=development</li>`
-`<li>DB_LOCAL_DBNAME="industry"</li>`
-`<li>DB_LOCAL_USER=</li>`
-`<li>DB_LOCAL_PASSWORD=</li>`
+<li>PORT=8888</li>
+<li>DB_HOST=</li>
+<li>NODE_ENV=development</li>
+<li>DB_LOCAL_DBNAME="industry"</li>
+<li>DB_LOCAL_USER=</li>
+<li>DB_LOCAL_PASSWORD=</li>
