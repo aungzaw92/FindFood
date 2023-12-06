@@ -1,0 +1,188 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/globals' as *;
+
+// .tryPageback {
+//   background-color: #fdf2e9;
+// }
+.tryForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  // background-image: linear-gradient(to right bottom, #eb984e, $btn-bg-color);
+
+  overflow: hidden;
+  @include tablet {
+    grid-template-columns: 5fr 1fr;
+    border-radius: 1rem;
+  }
+  //font
+  &-list {
+    display: flex;
+    flex-direction: column;
+    padding: 4.8rem 3.2rem 6.4rem 3.2rem;
+    @include tablet {
+      padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    }
+    &-heading {
+      font-size: 2.8rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: $cta-btn-color;
+      margin-bottom: 3.2rem;
+      @include tablet {
+        font-size: 3.6rem;
+      }
+    }
+    &-desc {
+      line-height: 1.8;
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &-imgbox {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(235, 151, 78, 0.2),
+        rgba(230, 125, 34, 0.1)
+      ),
+      url('../../assets/img/eating.jpg');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+  }
+}
+
+.preferences {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $cta-btn-color;
+    margin-top: 4rem;
+    // border-bottom: 2px solid $cta-btn-color;
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+  &__menuBtn {
+    width: 100%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &--lables {
+      display: flex;
+      &-label {
+        background-color: $divider-color;
+        padding: 0.5rem 3rem;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+        &-prefer {
+          border-radius: 9px 0 0 0;
+        }
+        &-avoid {
+          border-radius: 0 9px 0 0;
+        }
+      }
+    }
+
+    &-input {
+      height: 4rem;
+      width: 100%;
+      border: 1px solid $divider-color;
+      border-radius: 0 9px 9px 9px;
+      padding: 0.5rem 1rem;
+      @include tablet {
+        height: 3rem;
+      }
+      &::placeholder {
+        color: $divider-color;
+      }
+      &:focus-visible {
+        outline: 1px solid $txt-color-2;
+      }
+    }
+
+    &-addBtn {
+      margin-top: 1rem;
+      background-color: $divider-color !important;
+      color: $txt-color-1 !important;
+      &:hover {
+        background-color: $txt-color-2 !important;
+        color: $form-bg-color !important;
+      }
+    }
+  }
+  &__preferences {
+    display: flex;
+    gap: 1rem;
+
+    &-list {
+      width: 50%;
+      min-height: 15rem;
+      border-radius: 9px;
+      padding: 1.5rem 1rem;
+      font-size: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      border: 1px solid $divider-color;
+      // &-prefer {
+      //   // background-color: #c0eac2;
+      //   border: 1px solid #7bb981;
+      // }
+      // &-avoid {
+      //   // background-color: #f9b7b7;
+      //   border: 1px solid #de7a7a;
+      // }
+      &-h {
+        margin-bottom: 1rem;
+      }
+      &-item {
+        &--clear {
+          background-color: rgb(255, 255, 255);
+          border: none;
+          padding: 0.1rem 0.4rem 0.2rem 0.4rem;
+          margin-right: 0.5rem;
+          border-radius: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &__filterBtnContainer {
+    display: flex;
+    justify-content: center;
+    &--filterBtn {
+      margin-top: 4rem;
+      width: 100%;
+    }
+  }
+}
+
+.selected {
+  &__tab {
+    background-color: $btn-bg-color;
+    color: $bg-color;
+  }
+}
+.filteredDataContainer {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

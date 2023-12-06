@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTProRegular.otf") format(OpenType);
+  src: url("../../assets/font/AvenirNextLTProRegular.otf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTProBold.otf") format(OpenType);
+  src: url("../../assets/font/alternativefiles/AvenirNextLTProBold.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+}
+
+ul,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding: 0;
+}
+
+hr {
+  border: 1px solid #e1e1e1;
+  margin: 1.6rem 0;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1.6rem 0 1.6rem;
+  max-width: 70rem;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 3.6rem 0 3.6rem;
+    max-width: 100rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 128rem;
+  }
+}
+
+.btn {
+  color: #fafafa;
+  background-color: #e67e22;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #cf711f;
+}
+
+.menuItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+  animation: menu 0.6s ease-out;
+}
+@keyframes menu {
+  from {
+    margin-left: -100px;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menuItem {
+    grid-template-columns: 5fr 1fr;
+    border-radius: 1rem;
+  }
+}
+.menuItem__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .menuItem__txt {
+    border-radius: 0;
+    position: relative;
+    background-image: none;
+    border-radius: 2rem;
+    padding: 2rem 2rem;
+  }
+}
+.menuItem__txt-hAndPriceContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .menuItem__txt-hAndPriceContainer {
+    margin-top: 0;
+  }
+}
+.menuItem__txt-h {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #45260a;
+}
+.menuItem__txt-ing, .menuItem__txt-price {
+  font-size: 1.4rem;
+}
+.menuItem__txt-ing .highlighted {
+  background-color: yellow;
+}
+.menuItem__txt-price {
+  align-self: flex-end;
+}
+.menuItem__img-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 2rem 2rem;
+}
+@media screen and (min-width: 768px) {
+  .menuItem__img-img {
+    border-radius: 0 1rem 1rem 0;
+  }
+}

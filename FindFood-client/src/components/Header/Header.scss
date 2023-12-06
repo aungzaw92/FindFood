@@ -1,0 +1,129 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/globals' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-color;
+  height: 9.6rem;
+  padding: 0 1rem;
+  position: relative;
+  @include desktop {
+    padding: 0 4.8rem;
+  }
+  &__logo {
+    height: 2.2rem;
+    &:hover {
+      cursor: pointer;
+      scale: 1.05;
+    }
+  }
+  &__nav {
+    display: none;
+    @include tablet {
+      display: flex;
+      &-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        &-link {
+          text-decoration: none;
+          color: $txt-color-1;
+          font-size: 1.4rem;
+          transition: all 0.3s;
+          &:hover {
+            color: $hov-color;
+            cursor: pointer;
+          }
+        }
+        &-cartLink {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          justify-content: center;
+          padding: 0.2rem 2rem;
+          &:hover {
+            border: 1px solid $txt-color-1;
+            border-radius: 9px;
+          }
+          &-cart {
+            width: 3rem;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  &__mobileIcn {
+    background-color: transparent;
+    border: none;
+    @include tablet {
+      display: none;
+    }
+    &-menu {
+      background-color: transparent;
+      width: 40px;
+      height: 30px;
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.stickyNAv {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.909);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 10rem 2rem;
+    &-link {
+      text-decoration: none;
+      color: $txt-color-1;
+      transition: all 0.3s;
+      &:hover {
+        color: $hov-color;
+        cursor: pointer;
+      }
+    }
+    &-cartLink {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      padding: 0.2rem 2rem;
+      &:hover {
+        border: 1px solid $txt-color-1;
+        border-radius: 9px;
+      }
+      &-cart {
+        width: 3rem;
+        height: auto;
+      }
+    }
+    &-cta {
+      padding: 1.2rem 2.4rem;
+      border-radius: 9px;
+      color: $form-bg-color;
+      background-color: $btn-bg-color;
+      &:hover {
+        background-color: $hov-color;
+        color: $form-bg-color;
+      }
+    }
+  }
+}

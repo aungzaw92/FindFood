@@ -1,0 +1,12 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/globals' as *;
+
+.tryPage {
+  background-color: $bg-color;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+  background-color: #fdf2e9;
+}

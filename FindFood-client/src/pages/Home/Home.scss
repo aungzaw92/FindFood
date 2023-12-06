@@ -1,0 +1,9 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/globals' as *;
+
+.home {
+  background-color: #fdf2e9;
+  width: 100vw;
+  height: 100vh;
+}

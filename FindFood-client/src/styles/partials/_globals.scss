@@ -1,0 +1,60 @@
+@use './fonts' as *;
+@use './variables' as *;
+@use './mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  // overflow-x: hidden;
+}
+ul,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding: 0;
+}
+hr {
+  border: 1px solid $divider-color;
+  margin: 1.6rem 0;
+}
+.container {
+  margin: auto;
+  padding: 0 1.6rem 0 1.6rem;
+  max-width: 70rem;
+  @include tablet {
+    padding: 0 3.6rem 0 3.6rem;
+    max-width: 100rem;
+  }
+  @include desktop {
+    max-width: 128rem;
+  }
+}
+
+.btn {
+  color: $form-bg-color;
+  background-color: $btn-bg-color;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+  &:hover {
+    cursor: pointer;
+    background-color: $hov-color;
+  }
+}

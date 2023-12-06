@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTProRegular.otf") format(OpenType);
+  src: url("../../assets/font/AvenirNextLTProRegular.otf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/font/AvenirNextLTProBold.otf") format(OpenType);
+  src: url("../../assets/font/alternativefiles/AvenirNextLTProBold.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+}
+
+ul,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  padding: 0;
+}
+
+hr {
+  border: 1px solid #e1e1e1;
+  margin: 1.6rem 0;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1.6rem 0 1.6rem;
+  max-width: 70rem;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 3.6rem 0 3.6rem;
+    max-width: 100rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 128rem;
+  }
+}
+
+.btn {
+  color: #fafafa;
+  background-color: #e67e22;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #cf711f;
+}
+
+.tryForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .tryForm {
+    grid-template-columns: 5fr 1fr;
+    border-radius: 1rem;
+  }
+}
+.tryForm-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4.8rem 3.2rem 6.4rem 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .tryForm-list {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  }
+}
+.tryForm-list-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .tryForm-list-heading {
+    font-size: 3.6rem;
+  }
+}
+.tryForm-list-desc {
+  line-height: 1.8;
+  margin-bottom: 2.8rem;
+}
+.tryForm-imgbox {
+  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.2), rgba(230, 125, 34, 0.1)), url("../../assets/img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .tryForm-imgbox {
+    display: flex;
+  }
+}
+
+.preferences {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+}
+.preferences__heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #45260a;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .preferences__heading {
+    font-size: 2rem;
+  }
+}
+.preferences__menuBtn {
+  width: 100%;
+}
+.preferences__form {
+  display: flex;
+  flex-direction: column;
+}
+.preferences__form--lables {
+  display: flex;
+}
+.preferences__form--lables-label {
+  background-color: #e1e1e1;
+  padding: 0.5rem 3rem;
+  text-align: center;
+}
+.preferences__form--lables-label:hover {
+  cursor: pointer;
+}
+.preferences__form--lables-label-prefer {
+  border-radius: 9px 0 0 0;
+}
+.preferences__form--lables-label-avoid {
+  border-radius: 0 9px 0 0;
+}
+.preferences__form-input {
+  height: 4rem;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  border-radius: 0 9px 9px 9px;
+  padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .preferences__form-input {
+    height: 3rem;
+  }
+}
+.preferences__form-input::-moz-placeholder {
+  color: #e1e1e1;
+}
+.preferences__form-input::placeholder {
+  color: #e1e1e1;
+}
+.preferences__form-input:focus-visible {
+  outline: 1px solid #555;
+}
+.preferences__form-addBtn {
+  margin-top: 1rem;
+  background-color: #e1e1e1 !important;
+  color: #333 !important;
+}
+.preferences__form-addBtn:hover {
+  background-color: #555 !important;
+  color: #fafafa !important;
+}
+.preferences__preferences {
+  display: flex;
+  gap: 1rem;
+}
+.preferences__preferences-list {
+  width: 50%;
+  min-height: 15rem;
+  border-radius: 9px;
+  padding: 1.5rem 1rem;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid #e1e1e1;
+}
+.preferences__preferences-list-h {
+  margin-bottom: 1rem;
+}
+.preferences__preferences-list-item--clear {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.1rem 0.4rem 0.2rem 0.4rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+.preferences__preferences-list-item--clear:hover {
+  cursor: pointer;
+}
+.preferences__filterBtnContainer {
+  display: flex;
+  justify-content: center;
+}
+.preferences__filterBtnContainer--filterBtn {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.selected__tab {
+  background-color: #e67e22;
+  color: #fdf2e9;
+}
+
+.filteredDataContainer {
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
